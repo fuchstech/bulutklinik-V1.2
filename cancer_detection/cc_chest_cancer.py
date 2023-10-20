@@ -77,5 +77,5 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 print(classification_report(y_test,y_pred_svc))
 pd.DataFrame(X_test).to_csv("X_test.csv",index=False)
-with open('your_model_filename.pkl', 'wb') as file:
+with open('cancer_detection.pkl', 'wb') as file:
     pickle.dump(model, file)
