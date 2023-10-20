@@ -5,6 +5,7 @@ import seaborn as sns
 from sklearn.svm import SVC
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
+import pickle
 
 plt.style.use('fivethirtyeight')
 colors=['#011f4b','#03396c','#005b96','#6497b1','#b3cde0']
@@ -52,7 +53,6 @@ for i in X.columns[2:]:
 
 from imblearn.over_sampling import RandomOverSampler
 X_over,y_over=RandomOverSampler().fit_resample(X,y)
-
 from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test = train_test_split(X_over,y_over,random_state=42,stratify=y_over)
 print(f'Train shape : {X_train.shape}\nTest shape: {X_test.shape}')
@@ -61,7 +61,7 @@ from sklearn.preprocessing import StandardScaler
 scaler=StandardScaler()
 X_train['AGE']=scaler.fit_transform(X_train[['AGE']])
 X_test['AGE']=scaler.transform(X_test[['AGE']])
-
+print(X_train)
 model = SVC(gamma=10,C=100)
 model.fit(X_train,y_train)
 y_pred_svc=model.predict(X_test)
@@ -71,3 +71,6 @@ sns.heatmap(confusion_svc,annot=True)
 plt.xlabel("Predicted")
 plt.ylabel("Actual")
 print(classification_report(y_test,y_pred_svc))
+pd.DataFrame(X_test).to_csv("X_test.csv",index=False)
+with open('your_model_filename.pkl', 'wb') as file:
+    pickle.dump(model, file)
