@@ -59,9 +59,14 @@ print(f'Train shape : {X_train.shape}\nTest shape: {X_test.shape}')
 
 from sklearn.preprocessing import StandardScaler
 scaler=StandardScaler()
+print("#############################3")
+print(X_test)
+pd.DataFrame(X_test).to_csv("X_test1.csv",index=False)
+
 X_train['AGE']=scaler.fit_transform(X_train[['AGE']])
 X_test['AGE']=scaler.transform(X_test[['AGE']])
-print(X_train)
+print("#############################3")
+print(X_test)
 model = SVC(gamma=10,C=100)
 model.fit(X_train,y_train)
 y_pred_svc=model.predict(X_test)

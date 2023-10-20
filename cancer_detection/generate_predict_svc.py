@@ -24,46 +24,48 @@ for i in df.columns:
     if i!='AGE':
         cat_col.append(i)
 
-X=df.drop(['LUNG_CANCER'],axis=1)
+A=df.drop(['LUNG_CANCER'],axis=1)
 y=df['LUNG_CANCER']
 
-for i in X.columns[2:]:
+for i in A.columns[2:]:
     temp=[]
-    for j in X[i]:
+    for j in A[i]:
         temp.append(j-1)
-    X[i]=temp
-
-
-
-
-
-X_test = pd.read_csv("X_test.csv")
-print(X_test.shape[0])
-from sklearn.preprocessing import StandardScaler
-scaler=StandardScaler()
-X['AGE']=scaler.fit_transform(X_test[['AGE']])
-print(X)
+    A[i]=temp
 
 
 
 
 
 
+print(A['AGE'].values[0])
+age = A['AGE'].iloc[0]
+ages = pd.read_csv("X_test1.csv")["AGE"].values.tolist() #add2 bc range starts with 1 and an header column = 1
+fitted_ages = pd.read_csv("X_test.csv")["AGE"].values.tolist()
+if age in ages:
+    age = fitted_ages[ages.index(age)]
+    print(age)
+else:
+    for i in range(1,age*2):
+        if age+i in ages:
+            print(age, age + i ,ages.index(age+i))
+            print(fitted_ages[ages.index(age+i)])
+            age = fitted_ages[ages.index(age+i)]
+            break
+        if age-i in ages:
+            print(age, age - i ,ages.index(age-i))
+            print(fitted_ages[ages.index(age-i)])
+            age = fitted_ages[ages.index(age-i)]
+            break
 
-
-
-
-
-
-
-
-
-
+A['AGE'].iloc[0] = age
 
 with open('your_model_filename.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
     
-    predictions = loaded_model.predict(X_test)
+    predictions = loaded_model.predict(A)
 
 # Print the predictions
-print("Predictions:", predictions)
+    pres =["NO","YES"]
+    print(predictions)
+    print("Predictions:", pres[predictions[0]])
