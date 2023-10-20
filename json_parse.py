@@ -1,7 +1,34 @@
 import json
 data = {"AGE":"2323","GENDER":"F","boy":"23","kilo":"23","meslek":"avukat","diger":"","evcil_hayvan":"1","hayvan_turu":"","ALLERGY":"2","alerji_turu":"kadircan","ALCOHOL_CONSUMING":"2","alkol_miktar":"yilda 363","SMOKING":"1","sigara_miktar":"","YELLOW_FINGERS":"0"}
 
-def parse_js(data):
+data2={
+    "complaints": [
+        "'COUGHING': 2,",
+        "ates",
+        "ANXIETY"
+    ],
+    "additionalOptions": {
+        "COUGHING-dropdown": "dropdown",
+        "SHORTNESS_OF_BREATH-dropdown": "dropdown",
+        "WHEEZING-dropdown": "dropdown",
+        "CHEST_PAIN-checkboxes": "checkboxes",
+        "bayilma-checkboxes": "checkboxes",
+        "kilo-kaybi-checkboxes": "checkboxes",
+        "ates-dropdown": "dropdown",
+        "ANXIETY-dropdown": "dropdown",
+        "SWALLOWING_DIFFICULTY-dropdown": "dropdown",
+        "bas-checkboxes": "checkboxes",
+        "karin-checkboxes": "checkboxes",
+        "karinAgrisi-checkboxes": "checkboxes"
+    },
+    "sure": "66",
+    "bayilmasayisi": ""
+}
+def parse_js_form(data2):
+    data2 = json.dumps(data2,indent=4)
+    data2 = json.loads(data2)
+    print(json.loads(json.dumps(data2["complaints"])))
+def parse_js_kayit(data):
     js = json.dumps(data, indent=4)
     js = json.loads(js)
     #change str to integer
@@ -25,4 +52,4 @@ def parse_js(data):
     dataset=json.loads(dataset)
     print(dataset)
     return dataset
-parse_js(data)
+parse_js_form(data2)
