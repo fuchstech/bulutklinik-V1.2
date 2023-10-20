@@ -25,9 +25,9 @@ from tensorflow.keras.optimizers import Adam
 
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 # Define the paths to your train, validation, and test data folders
-train_data_dir = 'Data/train'
-validation_data_dir = 'Data/valid'
-test_data_dir = 'Data/test'
+train_data_dir = 'C:/Users/dest4/Desktop/Data/train'
+validation_data_dir = 'C:/Users/dest4/Desktop/Data/valid'
+test_data_dir = 'C:/Users/dest4/Desktop/Data/test'
 
 # Define image dimensions and batch size
 img_width, img_height = 150, 150
