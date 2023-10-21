@@ -11,8 +11,8 @@ model.compile(loss='categorical_crossentropy',
 class_labels = ['Adenocarcinoma', 'Large cell carcinoma', 'Normal', 'Squamous cell carcinoma']
 
 # Load a test image from the test folder
-test_image_path = '8.png'
-test_image = image.load_img(test_image_path, target_size=(224, 224))
+test_image_path = 'chest ct scan/test_data/sq.png'
+test_image = image.load_img(test_image_path, target_size=(150,150))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis=0)
 
