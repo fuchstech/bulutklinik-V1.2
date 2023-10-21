@@ -8,7 +8,7 @@ import pickle
 class Generate():
     def __init__(self) -> None:
         
-        df = pd.read_csv("result_data.csv")
+        df = pd.read_csv("cancer_detection/result_data.csv")
         df.drop_duplicates(inplace=True)
 
         from sklearn.preprocessing import LabelEncoder
@@ -36,8 +36,8 @@ class Generate():
 
         #print(A['AGE'].values[0])
         age = A['AGE'].iloc[0]
-        ages = pd.read_csv("X_test1.csv")["AGE"].values.tolist() #add2 bc range starts with 1 and an header column = 1
-        fitted_ages = pd.read_csv("X_test.csv")["AGE"].values.tolist()
+        ages = pd.read_csv("cancer_detection/X_test1.csv")["AGE"].values.tolist() #add2 bc range starts with 1 and an header column = 1
+        fitted_ages = pd.read_csv("cancer_detection/X_test.csv")["AGE"].values.tolist()
         if age in ages:
             age = fitted_ages[ages.index(age)]
             #print(age)
@@ -57,7 +57,7 @@ class Generate():
         A['AGE'].iloc[0] = age
         self.A = A
     def make_predictions(self):
-        with open('cancer_detection.pkl', 'rb') as file:
+        with open('cancer_detection/cancer_detection.pkl', 'rb') as file:
             loaded_model = pickle.load(file)
             
             predictions = loaded_model.predict(self.A)

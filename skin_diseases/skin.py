@@ -2,7 +2,6 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import cv2
 import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -11,11 +10,6 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 print(tf.__version__)
 
-# %%
-img=cv2.imread("IMG_CLASSES/1. Eczema 1677/0_10.jpg")
-img=cv2.resize(img,(224,224))
-img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-plt.imshow(img)
 
 # %%
 def preprocess (sdir, trsplit, vsplit):
@@ -42,7 +36,7 @@ def preprocess (sdir, trsplit, vsplit):
     print(train_df['labels'].value_counts())
     return train_df, test_df, valid_df
 
-sdir=r'IMG_CLASSES'
+sdir=r'../DATA/skin_disease/IMG_CLASSES'
 train_df, test_df, valid_df= preprocess(sdir, .9,.05)
 
 # %%
@@ -147,7 +141,7 @@ test_images = test_generator.flow_from_dataframe(
 
 # %%
 checkpoint = tf.keras.callbacks.ModelCheckpoint(
-    filepath='/kaggle/working/skin_model.h5',
+    filepath='skin_model.h5',
     save_weights_only=False,
     monitor='val_accuracy',
     mode='max',

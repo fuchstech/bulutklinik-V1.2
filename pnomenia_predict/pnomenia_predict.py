@@ -8,7 +8,7 @@ from keras.models import Sequential
 
 model = tf.keras.models.load_model('pnomenia_predict\pnomenia_model.h5',compile=False)
 model.compile(optimizer = "rmsprop" , loss = 'binary_crossentropy' , metrics = ['accuracy'])
-test_image_path = 'pnomenia_predict\IM-0129-0001.jpeg'
+test_image_path = r'pnomenia_predict\test_images\person100_bacteria_475.jpeg'
 test_image = image.load_img(test_image_path, target_size=(150,150), color_mode="grayscale")
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis=0)
@@ -18,7 +18,5 @@ test_image = test_image / 255.0
 
 # Perform inference
 predictions = model.predict(test_image)
-if predictions > 0.9:
-    print("Normal")
-else:
-    print("Pneumonia")
+predictions_class = ["Normal","Akciğer İltihabı"]
+print(np.argmax(predictions))

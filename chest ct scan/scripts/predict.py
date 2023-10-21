@@ -3,7 +3,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 from tensorflow.keras.optimizers import Adam
 # Load the saved model
-model = tf.keras.models.load_model('chest_cancer_detection_model.h5',compile=False)
+model = tf.keras.models.load_model(r"C:\Users\dest4\Desktop\DATA\chest_ct\weights\chest_cancer_detection_model.h5",compile=False)
 model.compile(loss='categorical_crossentropy',
               optimizer=Adam(learning_rate=0.001),
               metrics=['accuracy'])
