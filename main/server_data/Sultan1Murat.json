@@ -1,0 +1,19 @@
+{
+    "Data": {
+      "Oksijen": {
+        "Sp": "%93"
+      },
+      "Pnömani": 0,
+      "Deri Hastalığı": {
+        "Melanoma": 0,
+        "Atopic Dermatitis": 0,
+        "4. Basal Cell Carcinoma (BCC)": 0,
+        "Melanocytic Nevi (NV)": 0,
+        "Benign Keratosis-like Lesions": 0,
+        "Psoriasis pictures Lichen Planus and related diseases": 0,
+        "Tinea Ringworm Candidiasis and other Fungal Infections": 0,
+        "Warts Molluscum and other Viral Infections": 0
+      },
+      "Kanser Tahmini": 0
+    }
+  }
