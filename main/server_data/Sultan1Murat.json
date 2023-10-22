@@ -1,19 +1,44 @@
 {
-    "Data": {
-      "Oksijen": {
-        "Sp": "%93"
+  "Data": {
+    "Pnömani": 0,
+    "Deri Hastalığı": {
+      "Melanoma": 0,
+      "Atopic Dermatitis": 0,
+      "4. Basal Cell Carcinoma (BCC)": 0,
+      "Melanocytic Nevi (NV)": 0,
+      "Benign Keratosis-like Lesions": 0,
+      "Psoriasis pictures Lichen Planus and related diseases": 0,
+      "Tinea Ringworm Candidiasis and other Fungal Infections": 0,
+      "Warts Molluscum and other Viral Infections": 0
+    },
+    "Kanser Tahmini": 0,
+    "Kan Değerleri": {
+      "kan_basinci": {
+        "sistolik_basinc": "120 mm Hg",
+        "diyastolik_basinc": "80 mm Hg"
       },
-      "Pnömani": 0,
-      "Deri Hastalığı": {
-        "Melanoma": 0,
-        "Atopic Dermatitis": 0,
-        "4. Basal Cell Carcinoma (BCC)": 0,
-        "Melanocytic Nevi (NV)": 0,
-        "Benign Keratosis-like Lesions": 0,
-        "Psoriasis pictures Lichen Planus and related diseases": 0,
-        "Tinea Ringworm Candidiasis and other Fungal Infections": 0,
-        "Warts Molluscum and other Viral Infections": 0
+      "hemoglobin": {
+        "erkeklerde": "15.0 g/dL",
+        "kadınlarda": "13.5 g/dL"
       },
-      "Kanser Tahmini": 0
-    }
+      "kirmizi_kan_hucre_sayisi": {
+        "erkeklerde": "5.5 milyon/mm³",
+        "kadınlarda": "5.0 milyon/mm³"
+      },
+      "beyaz_kan_hucre_sayisi": "7000/mm³",
+      "trombosit_sayisi": "250,000/mm³",
+      "hematokrit": {
+        "erkeklerde": "45%",
+        "kadınlarda": "40%"
+      },
+      "glukoz": {
+        "aciklik_durumu": "90 mg/dL",
+        "aciklik_sonrasi_2_saat_sonra": "120 mg/dL"
+      },
+      "ure_azotu": "15 mg/dL",
+      "kreatinin": "1.0 mg/dL",
+      "kolesterol": "180 mg/dL"
+    },
+    "EKG Teşhisi": "Taşikardi"
   }
+}
