@@ -6,3 +6,5 @@ scikit-learn
 tensorflow
 keras
 opencv-python
+PyQt5
+tk-tools
