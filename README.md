@@ -24,6 +24,8 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 ```bash
 conda create -n bk
 conda activate bk
+git clone https://github.com/fuchstech/bulutklinik-V1.2.git
+cd bulutklinik-V1.2
 pip install -r requirements.txt
 ```
 ```bash
