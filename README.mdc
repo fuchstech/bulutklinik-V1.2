@@ -1,0 +1,8 @@
+conda create bk 
+
+conda activate bk 
+pip install -r requirements.txt
+
+cd pnomenia_predict 
+python3 uipno.py
+
