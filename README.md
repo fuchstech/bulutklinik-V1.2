@@ -25,16 +25,17 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
 conda create -n bk
 conda activate bk
 pip install -r requirements.txt
+```
+```bash
 
 cd pnomenia_predict
 python3 uipno.py
-
+```
+```bash
 cd skin_diseases
 python3 predict_skin.py #you need to change file paths
-
-cd pnomenia_predict
-python3 uipno.py
-
+```
+```bash
 cd chest ct scan
 python3 uipredict.py
-
+```
