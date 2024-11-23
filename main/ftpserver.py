@@ -10,7 +10,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\\Program Files\\Tesseract-OCR\\tess
 
 class Hastane:
     def __init__(self) -> None:
-        self.session = ftplib.FTP('mt-ares.guzelhosting.com','morvecom','226Iry4Tkz')
+        self.session = ftplib.FTP()
         self.tahlil = open(r"C:\Users\dest4\Desktop\bulutklinik-V1.2\main\server_data\tahlil\kan\Enabiz-Tahlilleri.pdf",'rb')  
         
     def send_kan_tahlil(self):
