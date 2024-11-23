@@ -28,3 +28,13 @@ pip install -r requirements.txt
 
 cd pnomenia_predict
 python3 uipno.py
+
+cd skin_diseases
+python3 predict_skin.py #you need to change file paths
+
+cd pnomenia_predict
+python3 uipno.py
+
+cd chest ct scan
+python3 uipredict.py
+
