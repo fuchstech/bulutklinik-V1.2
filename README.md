@@ -11,6 +11,10 @@ Bu repo, **2023 yılında düzenlenmiş olan Bulutklinik Hackathon** için 24 sa
 
 ---
 
+## 📑 Proje Sunumu
+Projeye ait detaylı sunumu incelemek için [Canva üzerinden erişebilirsiniz](https://www.canva.com/design/DAFx4PAW4Xo/sA0Ed5eXwhsNhKg3nNYDNw/edit?utm_content=DAFx4PAW4Xo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
+
+---
 ## 📁 Kodların Çalıştırılması
 
 Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
